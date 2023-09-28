@@ -1,0 +1,76 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double num1, num2,sum,res,mult,div;
+        int opc;
+
+        opc=1;
+
+        while (opc !=0){
+            System.out.println("Menú");
+            System.out.println("Opción 1: Suma");
+            System.out.println("Opción 2: Resta");
+            System.out.println("Opción 3: Multiplicación");
+            System.out.println("Opción 4: División");
+            System.out.println("Opción 5: Borrar");
+            System.out.println("Opción 0: Salir");
+            System.out.println("Ingrese la operación que desea realizar: ");
+            opc = sc.nextInt();
+            System.out.println("Ingrese el primer número: ");
+            num1 = sc.nextDouble();
+            while (opc !=5) {
+                if (opc == 1) {
+                    System.out.println("Ingrese el segundo número: ");
+                    num2 = sc.nextDouble();
+                    sum = num1 + num2;
+                    System.out.println(num1 + " + " + num2 + " = " + sum);
+                    num1 = sum;
+                } else if (opc == 2) {
+                    System.out.println("Ingrese el segundo número: ");
+                    num2 = sc.nextDouble();
+                    res = num1 - num2;
+                    System.out.println(num1 + " - " + num2 + " = " + res);
+                    num1 = res;
+                } else if (opc == 3) {
+                    System.out.println("Ingrese el segundo número: ");
+                    num2 = sc.nextDouble();
+                    mult = num1 * num2;
+                    System.out.println(num1 + " * " + num2 + " = " + mult);
+                    num1 = mult;
+                } else if (opc == 4) {
+                    System.out.println("Ingrese el segundo número: ");
+                    num2 = sc.nextDouble();
+                    if (num2 == 0) {
+                        System.out.println("Math Error");
+                    } else {
+                        div = num1 / num2;
+                        System.out.println(num1 + " / " + num2 + " = " + div);
+                        num1 = div;
+                    }
+                } else if (opc == 5) {
+                    System.out.println("Borrar");
+                } else if (opc == 0) {
+                    System.out.println("Hasta Luego!!!");
+                    break;
+                } else {
+                    System.out.println("Opción no válida!!!");
+                }
+                System.out.println("Opción 1: Suma");
+                System.out.println("Opción 2: Resta");
+                System.out.println("Opción 3: Multiplicación");
+                System.out.println("Opción 4: División");
+                System.out.println("Opción 5: Borrar");
+                System.out.println("Opción 0: Salir");
+                System.out.println("Ingrese la operación que desea realizar: ");
+                opc = sc.nextInt();
+            }
+        }
+
+
+
+
+
+    }
+}
